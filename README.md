@@ -12,3 +12,7 @@ Add Junk: Adds some empty classes & strings, etc so if some skiddy tries to deco
 Encode URL's with Base64 (Very Recommended): Makes the strings encoded in Base64 so when the victim tries to decompile it the Discord webhook url is encoded: ![](https://i.imgur.com/4DHTu15.png)
 
 Obfuscate Exe: Makes pretty much the code unreadable and a clutterfuck with Calli Protection & some more string encryption. Credit to https://github.com/Sato-Isolated/MindLated for open source obfuscator! ![](https://i.imgur.com/69LPHyo.png)
+
+
+
+If you don't know which boxes to check just do all of them as it's the best
