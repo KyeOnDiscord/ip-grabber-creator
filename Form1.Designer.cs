@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.log = new System.Windows.Forms.TextBox();
             this.nameSpace = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,10 +40,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.button2 = new System.Windows.Forms.Button();
             this.junkBox = new System.Windows.Forms.CheckBox();
-            this.encode1 = new System.Windows.Forms.CheckBox();
             this.obfbox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
@@ -70,19 +68,19 @@
             this.textBox1.Size = new System.Drawing.Size(706, 241);
             this.textBox1.TabIndex = 2;
             // 
-            // textBox2
+            // log
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(124)))), ((int)(((byte)(255)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Consolas", 8F);
-            this.textBox2.Location = new System.Drawing.Point(367, 341);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ReadOnly = true;
-            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
-            this.textBox2.Size = new System.Drawing.Size(355, 82);
-            this.textBox2.TabIndex = 3;
+            this.log.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(122)))), ((int)(((byte)(124)))), ((int)(((byte)(255)))));
+            this.log.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.log.Font = new System.Drawing.Font("Consolas", 8F);
+            this.log.Location = new System.Drawing.Point(367, 341);
+            this.log.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.log.Multiline = true;
+            this.log.Name = "log";
+            this.log.ReadOnly = true;
+            this.log.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
+            this.log.Size = new System.Drawing.Size(355, 82);
+            this.log.TabIndex = 3;
             // 
             // nameSpace
             // 
@@ -149,11 +147,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(68, 123);
+            this.label4.Location = new System.Drawing.Point(20, 122);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 15);
+            this.label4.Size = new System.Drawing.Size(117, 15);
             this.label4.TabIndex = 12;
-            this.label4.Text = ".exe Icon";
+            this.label4.Text = ".exe icon (Optional):";
             // 
             // textBox3
             // 
@@ -167,11 +165,6 @@
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(343, 40);
             this.textBox3.TabIndex = 11;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // button2
             // 
@@ -196,25 +189,12 @@
             this.junkBox.Text = "Add Junk (Recommended but can increase filesize)";
             this.junkBox.UseVisualStyleBackColor = true;
             // 
-            // encode1
-            // 
-            this.encode1.AutoSize = true;
-            this.encode1.Checked = true;
-            this.encode1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.encode1.Location = new System.Drawing.Point(138, 202);
-            this.encode1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.encode1.Name = "encode1";
-            this.encode1.Size = new System.Drawing.Size(252, 19);
-            this.encode1.TabIndex = 15;
-            this.encode1.Text = "Encode URLs with Base64 (Recommended)";
-            this.encode1.UseVisualStyleBackColor = true;
-            // 
             // obfbox
             // 
             this.obfbox.AutoSize = true;
             this.obfbox.Checked = true;
             this.obfbox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.obfbox.Location = new System.Drawing.Point(138, 229);
+            this.obfbox.Location = new System.Drawing.Point(138, 203);
             this.obfbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.obfbox.Name = "obfbox";
             this.obfbox.Size = new System.Drawing.Size(103, 19);
@@ -229,7 +209,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(79)))), ((int)(((byte)(254)))));
             this.ClientSize = new System.Drawing.Size(735, 433);
             this.Controls.Add(this.obfbox);
-            this.Controls.Add(this.encode1);
             this.Controls.Add(this.junkBox);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label4);
@@ -240,7 +219,7 @@
             this.Controls.Add(this.webhook);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.nameSpace);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.log);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -252,8 +231,6 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IP Grabber Creator | By Kye";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,7 +240,7 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox log;
         private System.Windows.Forms.TextBox nameSpace;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -272,10 +249,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.CheckBox junkBox;
-        private System.Windows.Forms.CheckBox encode1;
         private System.Windows.Forms.CheckBox obfbox;
     }
 }
