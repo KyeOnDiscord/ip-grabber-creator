@@ -16,5 +16,10 @@ Obfuscate Exe: Makes the code unreadable and a clutterfuck and makes it take min
 Credit to https://github.com/Sato-Isolated/MindLated for open source obfuscator!
 
 
+After someone has opened your program you'll get their IP and other useful information:
+
+![](https://imgur.com/wNmZzSl)
+
+
 
 If you don't know which boxes to check just do all of them as it's the best
