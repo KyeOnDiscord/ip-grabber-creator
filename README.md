@@ -18,7 +18,7 @@ Credit to https://github.com/Sato-Isolated/MindLated for open source obfuscator!
 
 After someone has opened your program you'll get their IP and other useful information:
 
-![](https://imgur.com/wNmZzSl)
+![](https://i.imgur.com/wNmZzSl.png)
 
 
 
