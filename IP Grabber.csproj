@@ -64,7 +64,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BlockParser.cs" />
-    <None Include="Class1.cs" />
     <Compile Include="ControlFlow.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
