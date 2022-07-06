@@ -1,4 +1,8 @@
-# ip-grabber-creator
+# IP Grabber Creator
+![](https://img.shields.io/github/languages/top/kyeondiscord/ip-grabber-creator?label=C%23)
+![](https://img.shields.io/github/stars/KyeOnDiscord/ip-grabber-creator)
+![](https://img.shields.io/github/downloads/kyeondiscord/ip-grabber-creator/total)
+
 Create an IP Grabber Easily without any knowledge of coding!
 
 <h5> How To Use </h5>
